@@ -1,0 +1,19 @@
+name: 'Promtool GH Action'
+description: 'Runs Prometheus Promtool commands via GitHub Actions.'
+author: 'Dianna Borinaga'
+branding:
+  icon: 'terminal'
+  color: 'purple'
+inputs:
+  promtool_actions_subcommand:
+    description: 'Promtool subcommand to execute (configs or rules).'
+    required: true
+  promtool_actions_files:
+    description: 'Path to files. Can be something like `configs/*.yml` or `alert_rules/*.yml`.'
+    required: true
+  promtool_actions_version:
+    description: 'Promtool version to install.'
+    default: 'latest'
+runs:
+  using: 'docker'
+  image: './Dockerfile'
