@@ -7,7 +7,7 @@ function promtoolCheckRules {
 
   # Exit code of 0 indicates success. Print the output and exit.
   if [ ${checkRulesExitCode} -eq 0 ]; then
-    echo "ERROR: Prometheus alert rule files ${promFiles} are valid."
+    echo "INFO: Prometheus alert rule files ${promFiles} are valid."
     echo "${checkRulesOut}"
     echo
   fi
